@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./recursos/css/estilos.css" />
+        <title>Herramientas</title>
+    </head>
+    <body>
+        <header class="cabecera">
+            <h1>Herramientas</h1>
+            <nav class="menu-principal">
+                <a class="menu-principal__link" href="./index.html">Inicio</a>
+                <a class="menu-principal__link" href="./contacto.html"
+                    >Contacto</a
+                >
+            </nav>
+        </header>
+        <main class="cuerpo">
+            <figure class="cuerpo__figure">
+                <img src="./recursos/imagenes/cabecera-contacto.jpg" alt="Herramientas">
+            </figure>
+            <section>
+                <header class="cuerpo-cabecera">
+                    <h2>Contacto</h2>
+                </header>
+                <form class="form" action="./contacto.html" method="post">
+                    <label for="id-nombre">Nombre</label>
+                    <input
+                        id="id-nombre"
+                        name="nombre"
+                        type="text"
+                        minlength="3"
+                        placeholder="su nombre"
+                        required
+                    />
+                    <label for="id-email">Email</label>
+                    <input
+                        id="id-email"
+                        name="email"
+                        type="email"
+                        placeholder="email@email.com"
+                        required
+                    />
+                    <label for="id-consulta">Consulta</label>
+                    <textarea
+                        id="id-consulta"
+                        name="consulta"
+                        cols="30"
+                        rows="10"
+                        required
+                    ></textarea>
+                    <button type="submit">Enviar consulta</button>
+                </form>
+            </section>
+        </main>
+        <footer class="pie">
+            <h5>AW1</h5>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,188 @@
+/**************************************/
+/* GENERALES **************************/
+/**************************************/
+
+/* modelo de caja */
+* {
+    box-sizing: border-box;
+}
+:root {
+    /* layout */
+    --cabecera: #cacaca;
+    --pie: #747474;
+
+    /* fuentes */
+    font-family: sans-serif;
+    /* tamaño */
+    font-size: 18px;
+}
+/* limpiar relleno y margen */
+html,
+body,
+h1,
+h3,
+h5,
+p,
+figure {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+/**************************************/
+/* layout *****************************/
+/**************************************/
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10px;
+    padding-inline: 10%;
+    gap: 20px;
+    background-color: var(--cabecera);
+}
+.cuerpo {
+    flex-grow: 1;
+    padding-block: 40px;
+    padding-inline: 10%;
+
+    background-color: #eee;
+}
+.cuerpo__figure {
+    width: 100%;
+}
+.cuerpo__figure > img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.cuerpo-cabecera {
+    padding-block: 10px;
+    margin-block: 10px;
+    border-bottom: 2px solid #333;
+}
+.cuerpo-cabecera__parrafo {
+    padding: 10px;
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #333;
+}
+.pie {
+    background-color: var(--pie);
+    padding-block: 10px;
+    padding-inline: 10%;
+
+    color: #fff;
+    text-align: center;
+}
+/* barra navegacion principal **********************/
+.menu-principal {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+.menu-principal__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #000000;
+    text-decoration: none;
+}
+.menu-principal__link:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+/**************************************/
+/* Artículos (index.html) *************/
+/**************************************/
+.contenedor-articulos {
+    display: flex;
+    flex-wrap: wrap;
+}
+.articulo {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    width: 100%;
+    padding: 10px;
+    margin-block-end: 25px;
+}
+.articulo__datos {
+    padding-block: 10px;
+}
+.articulo__fig {
+    width: 100%;
+}
+.articulo__fig > img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+@media (min-width: 768px) {
+    .articulo {
+        width: 50%;
+    }
+}
+@media (min-width: 1024px) {
+    .articulo {
+        width: 25%;
+    }
+}
+
+/**************************************/
+/* Contacto (contacto.html) ***********/
+/**************************************/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 0;
+    margin-block-end: 40px;
+}
+.form label,
+.form input,
+.form textarea {
+    font-size: inherit;
+    font-family: inherit;
+    padding-block: 10px;
+    padding-inline: 5px;
+    margin-block-end: 10px;
+}
+.form input {
+    border: 1px solid #333;
+}
+.form textarea {
+    border: 1px solid #333;
+    min-height: 300px;
+}
+.form button {
+    font-size: inherit;
+    color: #ffffff;
+    background-color: #333333;
+    padding-block: 20px;
+    margin-block-start: 15px;
+    border-radius: 6px;
+    border: none;
+}
+/* media query formulario */
+@media (min-width: 768px) {
+    .form {
+        padding-inline: 20%;
+    }
+}
